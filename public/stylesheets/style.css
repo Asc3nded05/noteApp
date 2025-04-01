@@ -1,0 +1,370 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #fffaf3;
+  overflow-x: hidden;
+}
+
+#pageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#headerContainer {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  flex: 0 0 10%;
+  padding: 20px 50px;
+  margin: 0;
+  width: 100%;
+  background-color: #00957f;
+  position: fixed;
+  box-sizing: border-box;
+  border: none, 5px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: #005b4d;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 40px;
+}
+
+form {
+  display: inline-block; /* Ensure search bar and button stay in a line */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#searchBarForm {
+  flex-direction: row;
+}
+
+#searchBar {
+  font-size: 18px;
+  background-color: #fffaf3;
+  margin: 10px;
+  border-radius: 5px;
+  height: 30px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.button{
+  font-size: 18px;
+  background-color: #fffaf3;
+  margin: 10px;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  border: none;
+}
+
+#newNoteButton {
+  margin-right: 50px;
+}
+
+#mainContent {
+  flex: 1; 
+  padding-top: 100px;
+}
+
+h2 {
+  font-size: 25px;
+  padding: 20px 50px;
+}
+
+hr {
+   border: 0;
+   height: 5px;
+   background-color: #fffaf3;
+   margin-top: 10px;
+   margin-bottom: 0px;
+   clear: both;
+   display: block;
+   width: 100%;     
+}
+
+ul {
+  width: 100%;
+  justify-items: center;
+}
+
+li {
+  display: flex;
+  flex-direction: column; /* Stack items vertically within the list item */
+  align-items: flex-start; /* Align content to the left */
+  justify-content: center; /* Center the text and buttons vertically */
+  list-style: none;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px; /* Add padding for spacing */
+  padding-right: 30px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.note {
+  width: 100%; /* Take the full width available for proper wrapping */
+  word-wrap: break-word; /* Ensure the text wraps to the next line if it's too long */
+  margin-bottom: 10px; /* Add spacing between the text and buttons */
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fffaf3;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+li div:last-child {
+  display: flex; /* Align buttons horizontally */
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add space between buttons */
+}
+
+.noteTitle {
+  font-size: 22px;
+}
+
+.linkButton {
+  display: flex; /* Make the link a flex container */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+  color: black;
+  font-size: 18px;
+  background-color: #fffaf3;
+  margin: 10px;
+  padding: 5px 10px; /* Add consistent padding */
+  border-radius: 5px;
+  width: 100px; /* Set a fixed width for uniformity */
+  height: 30px; /* Set a fixed height */
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+}
+
+
+.formContainer {
+  background-color: #00957f;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-color: #005b4d;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
+  padding: 20px
+}
+
+#newNoteForm {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.newNoteInput {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: #005b4d solid 5px;
+  background-color: #fffaf3;
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.checkboxAndColorContainer {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically align the items */
+  gap: 20px; /* Add spacing between the checkbox and color picker */
+}
+
+.checkboxContainer,
+.colorPickerContainer {
+  display: flex; /* Align label and input horizontally */
+  align-items: center; /* Vertically align label and input */
+  justify-content: center;
+  gap: 10px; /* Add space between label and input */
+}
+
+label {
+  font-size: 15px;
+}
+
+#starCheckbox {
+  width: 15px; /* Adjust checkbox width */
+  height: 15px; /* Adjust checkbox height */
+  transform: scale(1.5); /* Make it larger */
+  background-color: #fffaf3;
+}
+
+#colorPicker {
+  width: 25px; /* Adjust color picker width */
+  height: 25px; /* Adjust color picker height */
+  border: none;
+  background-color: #fffaf3;
+  padding: none;
+  margin: none;
+}
+
+.submitButton {
+  width: 20%;
+  background-color: #fffaf3;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: #005b4d solid 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  min-width: 100px;
+}
+
+#noteContent {
+  width: 100%; /* Ensures the content field fills the available width */
+  height: 100px; /* Provides enough height for multiple lines */
+  border: 5px solid #005b4d; /* Same border styling as the input fields */
+  border-radius: 5px; /* Rounded corners for consistency */
+  box-sizing: border-box; /* Includes padding and borders in the element's width */
+  resize: none; /* Prevents manual resizing of the textarea */
+  overflow-wrap: break-word; /* Ensures long words wrap to the next line */
+  padding: 10px; /* Adds padding inside the textarea */
+  background-color: #fffaf3; /* Matches the design aesthetics */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+input[type="color"] {
+  border-radius: 5px;
+  padding: 0;
+  border: 5px solid #DDD;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+.error {
+  color: rgb(194, 0, 0);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+form {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: center;
+  align-items: center;
+}
+#searchBar, .button {
+  flex: 1;
+  max-width: 300px; /* Adjust width as necessary */
+}
+
+@media (max-width: 700px) {
+  /* Header adjustments */
+  #headerContainer {
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center-align the header contents */
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    padding-right: 40px;
+  }
+
+  #mainContent {
+    padding-top: 0px;
+  }
+
+  #newNoteButton {
+    margin: 0px;
+  }
+
+  /* Search Bar adjustments */
+  form {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make search bar span full width */
+  }
+
+  .formContainer {
+    margin-top: 20px;
+  }  
+
+  input[type="text"] {
+    width: 90%; /* Input adapts to screen size */
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 50%; /* Smaller button width */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column; /* Stack the list items vertically */
+    align-items: center; /* Center the list items horizontally */
+    margin: 0 auto; /* Center the list within its container */
+    max-width: 90%; /* Add slight margins on both sides */
+    padding: 0; /* Remove default padding if necessary */
+    box-sizing: border-box;
+    margin-right: 28px;
+  }
+
+  /* List items adjustments */
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+    width: 100%; /* List items span full screen width */
+    margin: 5px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 600px; /* Limit the width to keep it visually appealing */
+    margin: 0 auto 10px auto; /* Center each list item and add spacing below */
+    overflow-wrap: break-word;
+    padding-right: 30px;
+  }
+
+  /* General adjustments for buttons */
+  .linkButton {
+    width: 90%; /* Make buttons adapt to screen width */
+    margin: 5px auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 24px; /* Adjust header text size */
+  }
+
+  .note {
+    margin-right: 100px;
+  }
+}

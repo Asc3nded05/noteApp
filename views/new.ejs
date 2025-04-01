@@ -1,0 +1,36 @@
+<%- include('layout'); -%>
+
+    <title><%= title %></title>
+    <link rel="stylesheet" href="\stylesheets\style.css">
+  </head>
+  <body>
+    <div id="pageContainer">
+      <div id="headerContainer">
+        <h1>New Note</h1>
+      </div>
+
+      <div class="formContainer">
+        <form id="newNoteForm" method="POST" action="/notes">
+          <input class="newNoteInput" type="text" name="title" placeholder="Enter a Title" /> <br/>
+          <textarea id="noteContent" name="content" placeholder="Enter your content"></textarea> <br/>
+          <div class="checkboxAndColorContainer">
+            <!-- Star Checkbox -->
+            <div class="checkboxContainer">
+              <label for="starCheckbox">Star</label>
+              <input id="starCheckbox" type="checkbox" name="starred" />
+            </div>
+          
+            <!-- Color Picker -->
+            <div class="colorPickerContainer">
+              <label for="colorPicker">Choose a color</label>
+              <input id="colorPicker" type="color" name="color" />
+            </div>
+          </div>
+          <input class="submitButton" type="submit" />
+        </form>
+      </div>
+    </div>
+
+    <script src="/javascripts/form-validation.js" charset="utf-8"></script>
+  </body>
+</html>
